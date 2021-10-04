@@ -1,0 +1,8 @@
+input {
+    width: 200px;
+    height: 100px;
+}
+
+input:hover {
+    background-color: rgb(114, 114, 197);
+}

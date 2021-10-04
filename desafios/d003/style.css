@@ -1,0 +1,9 @@
+input {
+    width: 200px;
+    height: 100px;
+}
+
+input:hover {
+    background-color: aqua;
+    color: yellow;
+}
