@@ -25,6 +25,7 @@ function adicionar() {
         let item = document.createElement("option")
         item.text = `Valor ${num.value} adicionado.`
         lista.appendChild(item)
+        res.innerHTML = ""
     } else {
         window.alert("Valor inválido ou já encontrado na lista.")
     }
@@ -33,5 +34,21 @@ function adicionar() {
 }
 
 function finalizar() {
-    res.innerHTML = `Ao todo temos ${valores.length} números cadastrados.`
+    let tot = valores.length
+    let maior = valores[0]
+    let menor = valores[0]
+    var soma = 0
+    for (let pos in valores) {
+        soma += valores[pos]
+        if (valores[pos] > maior) {
+            maior = valores[pos]
+        } else if (valores[pos] < menor) {
+            menor = valores[pos]
+        }
+    }
+    res.innerHTML = `<p>Ao todo, temos ${tot} números cadastrados</p>`
+    res.innerHTML += `<p>O maior valor informado foi ${maior}.</p>`
+    res.innerHTML += `<p>O menor valor informado foi ${menor}.</p>`
+    res.innerHTML += `<p>A somando todos os valores temos ${soma}</p>`
+    res.innerHTML += `<p>A média dos valores informados é de  ${(soma / tot).toFixed(2)}</p>`
 }
