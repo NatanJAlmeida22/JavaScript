@@ -33,5 +33,5 @@ function adicionar() {
 }
 
 function finalizar() {
-    
+    res.innerHTML = `Ao todo temos ${valores.length} números cadastrados.`
 }
